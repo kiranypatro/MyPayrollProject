@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "HolidayList";
+}
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<style>
+    .ui-widget-overlay {
+        background: black !important;
+        opacity: 0.5 !important;
+    }
+</style>
+<link href="~/Content/dataTables.bootstrap4.css" rel="stylesheet" />
+
+<style>
+    .table-wrapper {
+        background: #fff;
+        padding: 20px 25px;
+        margin: 30px 0;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+
+    .table-title {
+        padding-bottom: 15px;
+        background: #005a6e;
+        color: #fff;
+        padding: 5px 5px;
+        margin: -20px -25px 10px;
+        border-radius: 3px 3px 0 0;
+    }
+
+        .table-title h2 {
+            margin: 5px 0 0;
+            font-size: 24px;
+        }
+
+        .table-title .btn-group {
+            float: right;
+        }
+
+        .table-title .btn {
+            color: #fff;
+            float: right;
+            font-size: 13px;
+            border: none;
+            min-width: 50px;
+            border-radius: 2px;
+            border: none;
+            outline: none !important;
+            margin-left: 10px;
+        }
+
+            .table-title .btn i {
+                float: left;
+                font-size: 21px;
+                margin-right: 5px;
+            }
+
+            .table-title .btn span {
+                float: left;
+                margin-top: 2px;
+            }
+</style>
+
+<div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Holiday List</h2>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-default btn-md" onclick="PopupForm('@Url.Action("AddUpdateHolidays","Employee")')">
+                    <i class="fa fa-plus"></i> <span> Add Holidays</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <table id="HolidaysListData" style="width:100%;" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Holiday ID</th>
+                    <th>Name Of Holiday</th>
+                    <th>Date Of Holiday</th>
+                    <th>Day Of Holiday</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    @*<script src="~/Scripts/jquery-3.3.1.js"></script>*@
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    @*<script src="~/Content/DataTables/DataTables-1.10.21/js/jquery.dataTables.min.js"></script>
+        <script src="~/Content/DataTables/DataTables-1.10.21/js/dataTables.bootstrap4.min.js"></script>*@
+    <script src="~/Scripts/dateFormat.js"></script>
+
+    <script>
+        var popup, dataTable;
+        $(document).ready(function () {
+
+            dataTable = $("#HolidaysListData").DataTable({
+                "lengthMenu": [5, 10, 15, 20],
+                "ajax": {
+                    "url": "/Employee/GetHolidaysData",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "HolidayID" },
+                    { "data": "Holiday_Name" },
+                    {"data": "Holiday_Date", "type":'date'},
+                    { "data": "Day" },
+                    {
+                        "data": "HolidayID", "render": function (data) {
+                            return "<a onclick=PopupForm('@Url.Action("AddUpdateHolidays", "Employee")/"+ data +"')><i class='fa fa-check'></i>  </a><a onclick=Delete("+ data +")><i class='fa fa-trash'></i></a>"
+
+                        },
+                        "orderable": false,
+                        "searchable": false,
+                        "width": "100px"
+                    },
+                ],
+                "columnDefs": [
+                    {
+                        "type": 'date', "targets": 2, "render": function (data) {
+                                                     var nowDate = new Date(parseInt(data.substr(6)));
+                            var result = "";
+                            result = nowDate.format("dd/mm/yyyy");
+                            return result;
+                        }
+                    },
+                    {
+                        "targets": [0],
+                        "visible": false
+                    }
+                ],
+                "language": {
+                    "emptyTable": "No data found, Please click on <b>Add New</b> Button"
+                }
+            });
+        });
+        function PopupForm(url) {
+            var formDiv = $('<div/>');
+            $.get(url).done(function (response) {
+                formDiv.html(response);
+                popup = formDiv.dialog({
+                    autoOpen: true,
+                    resizable: false,
+                    modal: true,
+                    my: "center",
+                    at: "center",
+                    of: window,
+                    draggable: false,
+                    title: "Add Holidays",
+                    height: 300,
+                    width: 300,
+                    close: function () {
+                        popup.dialog('destroy').remove();
+                    }
+                });
+            })
+        }
+
+        function SubmitForm(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            popup.dialog('close');
+                            dataTable.ajax.reload();
+                            $.notify(data.message,
+                                {
+                                    globalPosition: "top center",
+                                    className: "success"
+                                })
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+
+        function Delete(id) {
+            if (confirm('Are you sure you want to delete the holiday record?')) {
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("DeleteHolidays","Employee")/' + id,
+                    success: function (data) {
+                        dataTable.ajax.reload();
+                        $.notify(data.message,
+                            {
+                                globalPosition: "top center",
+                                className: "success"
+                            })
+                    }
+
+
+                });
+            }
+        }
+
+
+
+    </script>
+
+}
+
+

@@ -1,0 +1,243 @@
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\HR_Payroll.dll.config
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\HR_Payroll.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\HR_Payroll.pdb
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\csc.exe
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\csc.exe.config
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\csc.rsp
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\csi.exe
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\csi.exe.config
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\csi.rsp
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.Managed.Core.targets
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.AppContext.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Collections.Immutable.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Console.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Compression.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.FileSystem.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Pipes.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Reflection.Metadata.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.AccessControl.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Claims.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Principal.Windows.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.ValueTuple.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XmlDocument.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XPath.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\vbc.exe
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\vbc.exe.config
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\vbc.rsp
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\VBCSCompiler.exe
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\roslyn\VBCSCompiler.exe.config
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Antlr3.Runtime.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\EntityFramework.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\EntityFramework.SqlServer.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Microsoft.Web.Infrastructure.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Newtonsoft.Json.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Helpers.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Mvc.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Optimization.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Razor.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Deployment.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Razor.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\WebGrease.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\EntityFramework.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\EntityFramework.SqlServer.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Helpers.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Mvc.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Optimization.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.Razor.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Deployment.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Razor.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Newtonsoft.Json.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Antlr3.Runtime.pdb
+E:\PayrollTest\HR_Payroll\HR_Payroll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PayrollTest\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.csproj.CoreCompileInputs.cache
+E:\PayrollTest\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.csproj.CopyComplete
+E:\PayrollTest\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.dll
+E:\PayrollTest\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.pdb
+D:\HR_Payroll\HR_Payroll\bin\HR_Payroll.dll.config
+D:\HR_Payroll\HR_Payroll\bin\HR_Payroll.dll
+D:\HR_Payroll\HR_Payroll\bin\HR_Payroll.pdb
+D:\HR_Payroll\HR_Payroll\bin\roslyn\csc.exe
+D:\HR_Payroll\HR_Payroll\bin\roslyn\csc.exe.config
+D:\HR_Payroll\HR_Payroll\bin\roslyn\csc.rsp
+D:\HR_Payroll\HR_Payroll\bin\roslyn\csi.exe
+D:\HR_Payroll\HR_Payroll\bin\roslyn\csi.exe.config
+D:\HR_Payroll\HR_Payroll\bin\roslyn\csi.rsp
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.Managed.Core.targets
+D:\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.AppContext.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Collections.Immutable.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Console.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Compression.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.FileSystem.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Pipes.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Reflection.Metadata.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.AccessControl.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Claims.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Principal.Windows.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.ValueTuple.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XmlDocument.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XPath.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\HR_Payroll\HR_Payroll\bin\roslyn\vbc.exe
+D:\HR_Payroll\HR_Payroll\bin\roslyn\vbc.exe.config
+D:\HR_Payroll\HR_Payroll\bin\roslyn\vbc.rsp
+D:\HR_Payroll\HR_Payroll\bin\roslyn\VBCSCompiler.exe
+D:\HR_Payroll\HR_Payroll\bin\roslyn\VBCSCompiler.exe.config
+D:\HR_Payroll\HR_Payroll\bin\Antlr3.Runtime.dll
+D:\HR_Payroll\HR_Payroll\bin\EntityFramework.dll
+D:\HR_Payroll\HR_Payroll\bin\EntityFramework.SqlServer.dll
+D:\HR_Payroll\HR_Payroll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HR_Payroll\HR_Payroll\bin\Microsoft.Web.Infrastructure.dll
+D:\HR_Payroll\HR_Payroll\bin\Newtonsoft.Json.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Helpers.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Mvc.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Optimization.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Razor.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Deployment.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.dll
+D:\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Razor.dll
+D:\HR_Payroll\HR_Payroll\bin\WebGrease.dll
+D:\HR_Payroll\HR_Payroll\bin\EntityFramework.xml
+D:\HR_Payroll\HR_Payroll\bin\EntityFramework.SqlServer.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Helpers.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Mvc.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Optimization.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.Razor.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Deployment.xml
+D:\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Razor.xml
+D:\HR_Payroll\HR_Payroll\bin\Newtonsoft.Json.xml
+D:\HR_Payroll\HR_Payroll\bin\Antlr3.Runtime.pdb
+D:\HR_Payroll\HR_Payroll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.csproj.CoreCompileInputs.cache
+D:\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.csproj.CopyComplete
+D:\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.dll
+D:\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.pdb
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.csproj.CoreCompileInputs.cache
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\HR_Payroll.dll.config
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\HR_Payroll.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\HR_Payroll.pdb
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\csc.exe
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\csc.exe.config
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\csc.rsp
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\csi.exe
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\csi.exe.config
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\csi.rsp
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.AppContext.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Collections.Immutable.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Console.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Compression.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.FileSystem.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.IO.Pipes.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Reflection.Metadata.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.AccessControl.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Claims.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.ValueTuple.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XPath.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\vbc.exe
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\vbc.exe.config
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\vbc.rsp
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\VBCSCompiler.exe
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\roslyn\VBCSCompiler.exe.config
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Antlr3.Runtime.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\EntityFramework.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\EntityFramework.SqlServer.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Microsoft.Web.Infrastructure.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Newtonsoft.Json.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Net.Http.Formatting.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Helpers.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Http.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Http.WebHost.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Mvc.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Optimization.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Razor.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Deployment.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Razor.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\WebGrease.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\EntityFramework.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\EntityFramework.SqlServer.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Net.Http.Formatting.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Http.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Http.WebHost.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Helpers.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Mvc.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Optimization.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.Razor.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Deployment.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\System.Web.WebPages.Razor.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Newtonsoft.Json.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Antlr3.Runtime.pdb
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.csproj.CopyComplete
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.dll
+E:\Sowjanya Desk\Solution_with_DB\Solution_with_DB\HR_Payroll\HR_Payroll\obj\Debug\HR_Payroll.pdb

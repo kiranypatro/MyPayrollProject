@@ -1,0 +1,44 @@
+﻿@model HR_Payroll.Models.Holiday
+@{
+    /**/
+
+    Layout = null;
+    ViewBag.Title = "AddUpdateHolidays";
+}
+
+<script>
+
+    if ($('#Holiday_Name').hasClass('text-box single-line')) {
+        $('#Holiday_Name').removeClass('text-box single-line');
+        $('#Holiday_Name').addClass('form-control');
+    }
+</script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+@using (Html.BeginForm("AddUpdateHolidays", "Employee", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.HolidayID)
+    <div class="form-group">
+        @Html.Label("Holiday Name", new { @class = "control-label" })
+        @Html.EditorFor(model => model.Holiday_Name, new { htmlAttribute = new { @class = "form-control form-control-sm" } })
+        @Html.ValidationMessageFor(model => model.Holiday_Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Date Of Holiday", new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Holiday_Date, "{0:yyyy-MM-dd}", new { @class = "form-control input-sm datepicker", @type = "date" })
+        @Html.ValidationMessageFor(model => model.Holiday_Date, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancel" class="btn btn-primary" />
+    </div>
+
+}
+
+
+

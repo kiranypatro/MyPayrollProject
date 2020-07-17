@@ -1,0 +1,31 @@
+﻿
+@model HR_Payroll.Models.Grade
+@{
+                /**/
+
+                Layout = null;
+                ViewBag.Title = "AddUpdateGrade";
+}
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+@using (Html.BeginForm("AddUpdateGrades", "Employee", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.Grade_ID)
+    <div class="form-group">
+        @Html.Label("Grade", new { @class = "control-label" })
+        @Html.EditorFor(model => model.Grade_Name, new { htmlAttribute = new { @class = "form-control form-control-sm" } })
+        @Html.ValidationMessageFor(model => model.Grade_Name, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancel" class="btn btn-primary" />
+    </div>
+
+}
+
+
+

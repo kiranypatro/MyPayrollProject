@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "ESIRates";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .table-wrapper {
+        background: #fff;
+        padding: 20px 25px;
+        margin: 30px 0;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+
+    .table-title {
+        padding-bottom: 15px;
+        background: #005a6e;
+        color: #fff;
+        padding: 5px 5px;
+        margin: -20px -25px 10px;
+        border-radius: 3px 3px 0 0;
+    }
+
+        .table-title h2 {
+            margin: 5px 0 0;
+            font-size: 24px;
+        }
+
+        .table-title .btn-group {
+            float: right;
+        }
+
+        .table-title .btn {
+            color: #fff;
+            float: right;
+            font-size: 13px;
+            border: none;
+            min-width: 50px;
+            border-radius: 2px;
+            border: none;
+            outline: none !important;
+            margin-left: 10px;
+        }
+
+            .table-title .btn i {
+                float: left;
+                font-size: 21px;
+                margin-right: 5px;
+            }
+
+            .table-title .btn span {
+                float: left;
+                margin-top: 2px;
+            }
+    textarea {
+        min-height: 100%;
+    }
+</style>
+<div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Employee State Insurance </h2>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-default btn-md" onclick="PopupForm('@Url.Action("AddUpdateDepartment","Employee")')">
+                    <i class="fa fa-plus"></i><span>&nbsp;&nbsp;Add Department&nbsp;&nbsp;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="panel-body">
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Employee Share (%)</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control form-control-sm" id="txtEmployeeShare" placeholder="Employee Share in %">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>ESI Cycle Changes</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control form-control-sm" id="txtTAddress1" placeholder="ESI Cycle Changes">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Round Off</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control form-control-sm" id="txtTAddress1" placeholder="Round Off">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Employer Share (%)</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control form-control-sm" id="txtEmployerShare" placeholder="Employer Share in %">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Cut Off</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control form-control-sm" id="txtCutOff" placeholder="Cut Off Rate">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Daily Wages</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control form-control-sm" id="txtTAddress1" placeholder="Group ddl">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Remarks</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <textarea style="height:80px;"  class="form-control form-control-sm" id="txtEmployeeShare" placeholder="Remarks"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>

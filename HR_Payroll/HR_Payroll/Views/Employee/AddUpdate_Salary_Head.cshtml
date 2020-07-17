@@ -1,0 +1,37 @@
+﻿@model HR_Payroll.Models.Salary_Head
+
+@{
+    /**/
+
+    Layout = null;
+    ViewBag.Title = "AddUpdateSalary_Head";
+}
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+@using (Html.BeginForm("AddUpdate_Salary_Head", "Employee", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Salary_Head_ID)
+    <div class="form-group">
+        @Html.Label("Salary Head Type", new { @class = "control-label" })
+        @Html.DropDownListFor(x => Model.Salary_Head_Type_ID, new SelectList(ViewBag.Salary_Head_Type_List, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(model => model.Salary_Head_Type_ID, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Salary Head Code", new { @class = "control-label" })
+        @Html.EditorFor(model => model.Salary_Head_Code, new { htmlAttribute = new { @class = "form-control  form-control-sm" } })
+        @Html.ValidationMessageFor(model => model.Salary_Head_Code, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Salary Head Name", new { @class = "control-label" })
+        @Html.EditorFor(model => model.Salary_Head_Name, new { htmlAttribute = new { @class = "form-control form-control-sm" } })
+        @Html.ValidationMessageFor(model => model.Salary_Head_Name, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancel" class="btn btn-primary" />
+    </div>
+}

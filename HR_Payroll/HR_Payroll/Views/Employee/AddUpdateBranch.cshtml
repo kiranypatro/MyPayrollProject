@@ -1,0 +1,306 @@
+﻿@model HR_Payroll.Models.Branch
+@{
+    /**/
+
+    Layout = null;
+    ViewBag.Title = "AddUpdateBranch";
+}
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+@using (Html.BeginForm("AddUpdateBranch", "Employee", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Branch_ID)
+    <div class="form-horizontal" style="top:62px !important">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                @Html.Label("Branch Name", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Branch_Name, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Branch_Name, "",new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.Label("Company Name", new { @class = "control-label" })
+                @Html.DropDownListFor(x => Model.Company_ID, new SelectList(ViewBag.CompanyList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(x => x.Company_ID, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.Label("Branch Type", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Branch_Type, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Branch_Type, "", new { @class = "text-danger" })
+               
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            @*<div class="form-group col-md-12">*@
+            @Html.Label("Adress1", new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Adress1, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Adress1)
+            @*</div>
+                <div class="form-group col-md-12">*@
+            @Html.Label("Adress2", new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Adress2, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Adress2)
+            @*</div>*@
+
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                @Html.Label("Land_Mark", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Land_Mark, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Land_Mark)
+
+            </div>
+            <div class="form-group col-md-4">
+                @Html.Label("State Name", new { @class = "control-label" })
+                @Html.DropDownListFor(x => Model.State_ID, new SelectList(ViewBag.StateList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(x => x.State_ID, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.Label("City", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.City, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+            </div>
+
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                @Html.Label("Country Name", new { @class = "control-label" })
+                @Html.DropDownListFor(x => Model.Country_ID, new SelectList(ViewBag.CountryList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(x => x.Country_ID, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-group col-md-4">
+                @Html.Label("Pin Code", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Pin_Code, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Pin_Code, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.Label("Landline Number", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Landline_Number, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Landline_Number, "", new { @class = "text-danger" })
+            </div>
+
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                @Html.Label("Mobile Number", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Mobile_Number, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Mobile_Number, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-group col-md-4">
+                @Html.Label("Email", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.Label("Branch Head", new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Branch_Head_Person_ID, new { @class = "form-control form-control-sm" })
+                @Html.ValidationMessageFor(model => model.Branch_Head_Person_ID)
+            </div>
+
+
+        </div>
+        @*<div class="form-group">
+                @Html.Label("Adress2", new { @class = "control-label" })
+                <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="Address I">
+            </div>
+            <div class="form-group">
+                @Html.Label("Adress2", new { @class = "control-label" })
+                <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Address II">
+            </div>*@
+
+        @*<div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="Mobile Number">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Contact Number">
+                </div>
+
+            </div>*@
+        @*<div class="form-group">
+                <input type="email" class="form-control form-control-sm" id="inputAddress" placeholder="Email Address">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="City">
+                </div>
+                <div class="form-group col-md-4">
+
+                    <input type="text" class="form-control form-control-sm" id="inputState" placeholder="State">
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control form-control-sm" id="inputZip" placeholder="Pin Code">
+                </div>
+            </div>*@
+
+
+    </div>
+    @*<div class="form-group ">
+            <div class="col-md-10">
+                @Html.Label("Branch Name", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Branch_Name, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Branch_Name)
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                @Html.Label("Company Name", new { @class = "control-label" })
+            </div>
+            <div class="col-md-6">
+                @Html.DropDownListFor(x => Model.Company_ID, new SelectList(ViewBag.CompanyList, "Value", "Text"), htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Company_ID, "", new { @class = "text-danger" })
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Branch Type", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Branch_Type, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Branch_Type)
+            </div>
+            </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Adress1", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Adress1, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adress1)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Adress2", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Adress2, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adress2)
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Adress3", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Adress3, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adress3)
+            </div>
+         </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Land_Mark", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Land_Mark, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Land_Mark)
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-5">
+                @Html.Label("State Name", new { @class = "control-label" })
+            </div>
+            <div class="col-md-7">
+                @Html.DropDownListFor(x => Model.State_ID, new SelectList(ViewBag.StateList, "Value", "Text"), htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.State_ID, "", new { @class = "text-danger" })
+            </div>
+
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("City", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.City, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.City)
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                @Html.Label("Country Name", new { @class = "control-label" })
+            </div>
+            <div class="col-md-6">
+                @Html.DropDownListFor(x => Model.Country_ID, new SelectList(ViewBag.CountryList, "Value", "Text"), htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Country_ID, "", new { @class = "text-danger" })
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Pin Code", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Pin_Code, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Pin_Code)
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Landline Number", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Landline_Number, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Landline_Number)
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Mobile Number", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Mobile_Number, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mobile_Number)
+            </div>
+
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Email", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Email, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.Label("Branch_Head_Person_ID", new { @class = "control-label" })
+            </div>
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Branch_Head_Person_ID, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Branch_Head_Person_ID)
+            </div>
+            </div>*@
+    @*<br />*@
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancel" class="btn btn-primary" />
+    </div>
+
+}

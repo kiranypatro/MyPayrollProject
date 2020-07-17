@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HRM_PayrollModelStoreContainer" CdmEntityContainer="HR_PayrollEntities">
+    <EntitySetMapping Name="Asset_Category">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Asset_Category">
+        <MappingFragment StoreEntitySet="Asset_Category">
+          <ScalarProperty Name="Asset_Category_ID" ColumnName="Asset_Category_ID" />
+          <ScalarProperty Name="Category_Code" ColumnName="Category_Code" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asset_Status">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Asset_Status">
+        <MappingFragment StoreEntitySet="Asset_Status">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Issuable" ColumnName="Issuable" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asset_Sub_Category">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Asset_Sub_Category">
+        <MappingFragment StoreEntitySet="Asset_Sub_Category">
+          <ScalarProperty Name="Asset_Sub_Category_ID" ColumnName="Asset_Sub_Category_ID" />
+          <ScalarProperty Name="Sub_Category_Code" ColumnName="Sub_Category_Code" />
+          <ScalarProperty Name="Sub_Category_Name" ColumnName="Sub_Category_Name" />
+          <ScalarProperty Name="Asset_Category_ID" ColumnName="Asset_Category_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="SubAsset_Purchase_Date" ColumnName="SubAsset_Purchase_Date" />
+          <ScalarProperty Name="SubAsset_Warranty_Date" ColumnName="SubAsset_Warranty_Date" />
+          <ScalarProperty Name="SubAsset_Value" ColumnName="SubAsset_Value" />
+          <ScalarProperty Name="SubAsset_Recovery_Value" ColumnName="SubAsset_Recovery_Value" />
+          <ScalarProperty Name="SubAsset_ModelNo" ColumnName="SubAsset_ModelNo" />
+          <ScalarProperty Name="SubAsset_SerialNo" ColumnName="SubAsset_SerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Branch">
+        <MappingFragment StoreEntitySet="Branch">
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+          <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="Branch_Type" ColumnName="Branch_Type" />
+          <ScalarProperty Name="Adress1" ColumnName="Adress1" />
+          <ScalarProperty Name="Adress2" ColumnName="Adress2" />
+          <ScalarProperty Name="Adress3" ColumnName="Adress3" />
+          <ScalarProperty Name="Land_Mark" ColumnName="Land Mark" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Pin_Code" ColumnName="Pin Code" />
+          <ScalarProperty Name="Landline_Number" ColumnName="Landline Number" />
+          <ScalarProperty Name="Mobile_Number" ColumnName="Mobile Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Branch_Head_Person_ID" ColumnName="Branch_Head_Person_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityMasters">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.CityMaster">
+        <MappingFragment StoreEntitySet="CityMaster">
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="City_Code" ColumnName="City_Code" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Communication_Address">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Communication_Address">
+        <MappingFragment StoreEntitySet="Communication_Address">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Plot_No" ColumnName="Plot_No" />
+          <ScalarProperty Name="Flat_No" ColumnName="Flat_No" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="Pin_Code" ColumnName="Pin_Code" />
+          <ScalarProperty Name="Land_Mark" ColumnName="Land_Mark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Assets">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Company_Assets">
+        <MappingFragment StoreEntitySet="Company_Assets">
+          <ScalarProperty Name="Company_Assets_ID" ColumnName="Company_Assets_ID" />
+          <ScalarProperty Name="Asset_Category" ColumnName="Asset_Category" />
+          <ScalarProperty Name="Asset_Sub_Category" ColumnName="Asset_Sub_Category" />
+          <ScalarProperty Name="Asset_Name" ColumnName="Asset_Name" />
+          <ScalarProperty Name="Asset_Working_Status" ColumnName="Asset_Working_Status" />
+          <ScalarProperty Name="Asset_Value" ColumnName="Asset_Value" />
+          <ScalarProperty Name="Recoverable_Value" ColumnName="Recoverable_Value" />
+          <ScalarProperty Name="Purchase_Date" ColumnName="Purchase_Date" />
+          <ScalarProperty Name="Warranty_Date" ColumnName="Warranty_Date" />
+          <ScalarProperty Name="Serial_No" ColumnName="Serial_No" />
+          <ScalarProperty Name="Part_No" ColumnName="Part_No" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dependents">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Dependent">
+        <MappingFragment StoreEntitySet="Dependents">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Relation_ID" ColumnName="Relation_ID" />
+          <ScalarProperty Name="Relative_Name" ColumnName="Relative_Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Designation">
+        <MappingFragment StoreEntitySet="Designation">
+          <ScalarProperty Name="Designation_ID" ColumnName="Designation_ID" />
+          <ScalarProperty Name="Designation_Name" ColumnName="Designation_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educational_Background">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Educational_Background">
+        <MappingFragment StoreEntitySet="Educational_Background">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Educational_Qualification" ColumnName="Educational_Qualification" />
+          <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+          <ScalarProperty Name="From_Date" ColumnName="From_Date" />
+          <ScalarProperty Name="To_Date" ColumnName="To_Date" />
+          <ScalarProperty Name="Year_Of_Passing" ColumnName="Year_Of_Passing" />
+          <ScalarProperty Name="Mark_Percentage" ColumnName="Mark_Percentage" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Emp_FirstName" ColumnName="Emp_FirstName" />
+          <ScalarProperty Name="Emp_MiddleName" ColumnName="Emp_MiddleName" />
+          <ScalarProperty Name="Emp_LastName" ColumnName="Emp_LastName" />
+          <ScalarProperty Name="Emp_Dob" ColumnName="Emp_Dob" />
+          <ScalarProperty Name="Emp_Doj" ColumnName="Emp_Doj" />
+          <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+          <ScalarProperty Name="Designation_ID" ColumnName="Designation_ID" />
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Sub_Department_ID" ColumnName="Sub_Department_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Employee_Group_Code_Name" ColumnName="Employee_Group_Code_Name" />
+          <ScalarProperty Name="Machine_Details_ID" ColumnName="Machine_Details_ID" />
+          <ScalarProperty Name="Machine_Punching_Card_No" ColumnName="Machine_Punching_Card_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Advance">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Advance">
+        <MappingFragment StoreEntitySet="Employee_Advance">
+          <ScalarProperty Name="Advance_ID" ColumnName="Advance_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Date_Year_Month" ColumnName="Date_Year_Month" />
+          <ScalarProperty Name="Advance_Amount" ColumnName="Advance_Amount" />
+          <ScalarProperty Name="Previous_Amount" ColumnName="Previous_Amount" />
+          <ScalarProperty Name="Recover_Amount" ColumnName="Recover_Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Allocate_Asstets">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Allocate_Asstets">
+        <MappingFragment StoreEntitySet="Employee_Allocate_Asstets">
+          <ScalarProperty Name="Employee_Allocate_Asstets_ID" ColumnName="Employee_Allocate_Asstets_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Company_Assets_ID" ColumnName="Company_Assets_ID" />
+          <ScalarProperty Name="Issuable_Date" ColumnName="Issuable_Date" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Attandance">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Attandance">
+        <MappingFragment StoreEntitySet="Employee_Attandance">
+          <ScalarProperty Name="Attandance_ID" ColumnName="Attandance_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="No_Of_Working_Day" ColumnName="No_Of_Working_Day" />
+          <ScalarProperty Name="Pay_Days" ColumnName="Pay_Days" />
+          <ScalarProperty Name="No_Of_Days_Emp_Attended" ColumnName="No_Of_Days_Emp_Attended" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Bonus">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Bonus">
+        <MappingFragment StoreEntitySet="Employee_Bonus">
+          <ScalarProperty Name="Bonus_ID" ColumnName="Bonus_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Bounus_Amount" ColumnName="Bounus_Amount" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Gratutity">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Gratutity">
+        <MappingFragment StoreEntitySet="Employee_Gratutity">
+          <ScalarProperty Name="Gratutity_ID" ColumnName="Gratutity_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Date_Of_Leaving" ColumnName="Date_Of_Leaving" />
+          <ScalarProperty Name="NO_Of_Year_Services" ColumnName="NO_Of_Year_Services" />
+          <ScalarProperty Name="Salary_Consider" ColumnName="Salary_Consider" />
+          <ScalarProperty Name="Gratutity_Amount" ColumnName="Gratutity_Amount" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Leave_Enchasement">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Leave_Enchasement">
+        <MappingFragment StoreEntitySet="Employee_Leave_Enchasement">
+          <ScalarProperty Name="Leave_Enchasement_ID" ColumnName="Leave_Enchasement_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Type_Of_Leave_Enchase" ColumnName="Type_Of_Leave_Enchase" />
+          <ScalarProperty Name="Leave_Amount_Per_Unit" ColumnName="Leave_Amount_Per_Unit" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Recover_Asstets">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Recover_Asstets">
+        <MappingFragment StoreEntitySet="Employee_Recover_Asstets">
+          <ScalarProperty Name="Recover_Asstets_ID" ColumnName="Recover_Asstets_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Employee_Allocate_Asstets_ID" ColumnName="Employee_Allocate_Asstets_ID" />
+          <ScalarProperty Name="Recoverable_Date" ColumnName="Recoverable_Date" />
+          <ScalarProperty Name="Recover_Yes_No" ColumnName="Recover_Yes_No" />
+          <ScalarProperty Name="Recover_Amount" ColumnName="Recover_Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Reimbursement">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Reimbursement">
+        <MappingFragment StoreEntitySet="Employee_Reimbursement">
+          <ScalarProperty Name="Reimbursement_ID" ColumnName="Reimbursement_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Reimbursement_Name" ColumnName="Reimbursement_Name" />
+          <ScalarProperty Name="Reimbursement_Amount" ColumnName="Reimbursement_Amount" />
+          <ScalarProperty Name="Time_Rule" ColumnName="Time_Rule" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Salary">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Salary">
+        <MappingFragment StoreEntitySet="Employee_Salary">
+          <ScalarProperty Name="Salary_ID" ColumnName="Salary_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Group_Type_ID" ColumnName="Salary_Group_Type_ID" />
+          <ScalarProperty Name="Earning_Salary_Amount" ColumnName="Earning_Salary_Amount" />
+          <ScalarProperty Name="Deduction_Salary_Amount" ColumnName="Deduction_Salary_Amount" />
+          <ScalarProperty Name="WEF_Date" ColumnName="WEF_Date" />
+          <ScalarProperty Name="Salary_Payment_Mode" ColumnName="Salary_Payment_Mode" />
+          <ScalarProperty Name="Financial_Year" ColumnName="Financial_Year" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Salary_Account">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Salary_Account">
+        <MappingFragment StoreEntitySet="Employee_Salary_Account">
+          <ScalarProperty Name="Salary_Account_ID" ColumnName="Salary_Account_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank_Account_Number" />
+          <ScalarProperty Name="IFSC_Code" ColumnName="IFSC_Code" />
+          <ScalarProperty Name="Bank_Location_Branch" ColumnName="Bank_Location_Branch" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Salary_Group_Mapping">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Salary_Group_Mapping">
+        <MappingFragment StoreEntitySet="Employee_Salary_Group_Mapping">
+          <ScalarProperty Name="Mapping_ID" ColumnName="Mapping_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Group_Type_ID" ColumnName="Salary_Group_Type_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Salary_Offer_Gross">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_Salary_Offer_Gross">
+        <MappingFragment StoreEntitySet="Employee_Salary_Offer_Gross">
+          <ScalarProperty Name="Salary_Offer_Gross_ID" ColumnName="Salary_Offer_Gross_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Yearly_Gross" ColumnName="Yearly_Gross" />
+          <ScalarProperty Name="Monthly_Gross" ColumnName="Monthly_Gross" />
+          <ScalarProperty Name="Financial_Year" ColumnName="Financial_Year" />
+          <ScalarProperty Name="Appraisal_Year" ColumnName="Appraisal_Year" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_TDS">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Employee_TDS">
+        <MappingFragment StoreEntitySet="Employee_TDS">
+          <ScalarProperty Name="TDS_ID" ColumnName="TDS_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="TDS_Amount" ColumnName="TDS_Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESI_Rate">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.ESI_Rate">
+        <MappingFragment StoreEntitySet="ESI_Rate">
+          <ScalarProperty Name="Esi_Rate_ID" ColumnName="Esi_Rate_ID" />
+          <ScalarProperty Name="Fiancial_Year_ID" ColumnName="Fiancial_Year_ID" />
+          <ScalarProperty Name="Employee_Share_Percentage" ColumnName="Employee_Share_Percentage" />
+          <ScalarProperty Name="Employee_Share_Cut_Off" ColumnName="Employee_Share_Cut_Off" />
+          <ScalarProperty Name="Employer_Share_Pension_Percentage" ColumnName="Employer_Share_Pension_Percentage" />
+          <ScalarProperty Name="Employer_Share_PF_Percentage" ColumnName="Employer_Share_PF_Percentage" />
+          <ScalarProperty Name="Esi_Daily_Wages" ColumnName="Esi_Daily_Wages" />
+          <ScalarProperty Name="Reamrk" ColumnName="Reamrk" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Experince_Letter_Previous_Company">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Experince_Letter_Previous_Company">
+        <MappingFragment StoreEntitySet="Experince_Letter_Previous_Company">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Sister_Company_Name" ColumnName="Sister_Company_Name" />
+          <ScalarProperty Name="From_Date" ColumnName="From_Date" />
+          <ScalarProperty Name="To_Date" ColumnName="To_Date" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financial_Institute_Employee_Mapping">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Financial_Institute_Employee_Mapping">
+        <MappingFragment StoreEntitySet="Financial_Institute_Employee_Mapping">
+          <ScalarProperty Name="Mapping_ID" ColumnName="Mapping_ID" />
+          <ScalarProperty Name="Financial_Institution_ID" ColumnName="Financial_Institution_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Address_Finacial_Institute" ColumnName="Address_Finacial_Institute" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financial_Institution">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Financial_Institution">
+        <MappingFragment StoreEntitySet="Financial_Institution">
+          <ScalarProperty Name="Financial_Institution_ID" ColumnName="Financial_Institution_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financial_Year">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Financial_Year">
+        <MappingFragment StoreEntitySet="Financial_Year">
+          <ScalarProperty Name="Financial_Year_ID" ColumnName="Financial_Year_ID" />
+          <ScalarProperty Name="Fin_Year" ColumnName="Fin_Year" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+          <ScalarProperty Name="Grade_Name" ColumnName="Grade_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gratutity_Setting">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Gratutity_Setting">
+        <MappingFragment StoreEntitySet="Gratutity_Setting">
+          <ScalarProperty Name="Gratutity_Setting_ID" ColumnName="Gratutity_Setting_ID" />
+          <ScalarProperty Name="Maximum_Gratutity_Limit" ColumnName="Maximum_Gratutity_Limit" />
+          <ScalarProperty Name="Min_Eligibility_Year_for_Gratutity" ColumnName="Min_Eligibility_Year_for_Gratutity" />
+          <ScalarProperty Name="Gratutity_Calculated_On" ColumnName="Gratutity_Calculated_On" />
+          <ScalarProperty Name="Fiancial_Year_ID" ColumnName="Fiancial_Year_ID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Health_Insurance">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Health_Insurance">
+        <MappingFragment StoreEntitySet="Health_Insurance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Associate_Name" ColumnName="Associate_Name" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="Relative_Candidate_Name" ColumnName="Relative_Candidate_Name" />
+          <ScalarProperty Name="Policy_No" ColumnName="Policy_No" />
+          <ScalarProperty Name="Valid_From" ColumnName="Valid_From" />
+          <ScalarProperty Name="Valid_To" ColumnName="Valid_To" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Holidays">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Holiday">
+        <MappingFragment StoreEntitySet="Holiday">
+          <ScalarProperty Name="HolidayID" ColumnName="HolidayID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Holiday_Name" ColumnName="Holiday_Name" />
+          <ScalarProperty Name="Holiday_Date" ColumnName="Holiday_Date" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Language_Name" ColumnName="Language_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marriage_Certificate_Proof">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Marriage_Certificate_Proof">
+        <MappingFragment StoreEntitySet="Marriage_Certificate_Proof">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Spouce_Name" ColumnName="Spouce_Name" />
+          <ScalarProperty Name="Data_Of_Marriage" ColumnName="Data_Of_Marriage" />
+          <ScalarProperty Name="Marriage_Certificate_Ref_No" ColumnName="Marriage_Certificate_Ref_No" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monthly_Salary_Roaster">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Monthly_Salary_Roaster">
+        <MappingFragment StoreEntitySet="Monthly_Salary_Roaster">
+          <ScalarProperty Name="Monthly_Salary_Roaster_ID" ColumnName="Monthly_Salary_Roaster_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_Dept_Name" ColumnName="Employee_Dept_Name" />
+          <ScalarProperty Name="No_Of_Working_Days" ColumnName="No_Of_Working_Days" />
+          <ScalarProperty Name="No_Pay_days" ColumnName="No_Pay_days" />
+          <ScalarProperty Name="No_Of_Attendance" ColumnName="No_Of_Attendance" />
+          <ScalarProperty Name="Gross_Salary" ColumnName="Gross_Salary" />
+          <ScalarProperty Name="Basic_Amount_Earning" ColumnName="Basic_Amount_Earning" />
+          <ScalarProperty Name="Conveyance_Allowance_Earning" ColumnName="Conveyance_Allowance_Earning" />
+          <ScalarProperty Name="HRA_Earning" ColumnName="HRA_Earning" />
+          <ScalarProperty Name="Medical_Allowance_Earning" ColumnName="Medical_Allowance_Earning" />
+          <ScalarProperty Name="Travelling_Allowance_Earning" ColumnName="Travelling_Allowance_Earning" />
+          <ScalarProperty Name="Money_Advance_Earning" ColumnName="Money_Advance_Earning" />
+          <ScalarProperty Name="Other_Reimbursement_Amount_Earning" ColumnName="Other_Reimbursement_Amount_Earning" />
+          <ScalarProperty Name="Bouns_Earning" ColumnName="Bouns_Earning" />
+          <ScalarProperty Name="Gratutity_Earning" ColumnName="Gratutity_Earning" />
+          <ScalarProperty Name="Leave_Enchasment_Earning" ColumnName="Leave_Enchasment_Earning" />
+          <ScalarProperty Name="Food_Coupon_Deduction" ColumnName="Food_Coupon_Deduction" />
+          <ScalarProperty Name="PF_Deduction" ColumnName="PF_Deduction" />
+          <ScalarProperty Name="ESI_Deduction" ColumnName="ESI_Deduction" />
+          <ScalarProperty Name="TDS_Deduction" ColumnName="TDS_Deduction" />
+          <ScalarProperty Name="Money_Advance_Recovery_Deduction" ColumnName="Money_Advance_Recovery_Deduction" />
+          <ScalarProperty Name="Asset_Recovery_Deduction" ColumnName="Asset_Recovery_Deduction" />
+          <ScalarProperty Name="Gross_Deduction" ColumnName="Gross_Deduction" />
+          <ScalarProperty Name="Gross_Earning" ColumnName="Gross_Earning" />
+          <ScalarProperty Name="Net_Payable" ColumnName="Net_Payable" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NationalityMasters">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.NationalityMaster">
+        <MappingFragment StoreEntitySet="NationalityMaster">
+          <ScalarProperty Name="Nationality_ID" ColumnName="Nationality_ID" />
+          <ScalarProperty Name="Nationality_Name" ColumnName="Nationality_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nominee_Details">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Nominee_Details">
+        <MappingFragment StoreEntitySet="Nominee_Details">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Nominee1" ColumnName="Nominee1" />
+          <ScalarProperty Name="Nominee2" ColumnName="Nominee2" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pan_Card">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Pan_Card">
+        <MappingFragment StoreEntitySet="Pan_Card">
+          <ScalarProperty Name="Pan_Card_ID" ColumnName="Pan_Card_ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Pan_Number" ColumnName="Pan_Number" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Passports">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Passport">
+        <MappingFragment StoreEntitySet="Passport">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permanent_Address">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Permanent_Address">
+        <MappingFragment StoreEntitySet="Permanent_Address">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Plot_N0" ColumnName="Plot_N0" />
+          <ScalarProperty Name="Flat_No" ColumnName="Flat_No" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Pin_Code" ColumnName="Pin_Code" />
+          <ScalarProperty Name="Land_Mark" ColumnName="Land_Mark" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PF_Rate">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.PF_Rate">
+        <MappingFragment StoreEntitySet="PF_Rate">
+          <ScalarProperty Name="PF_Rate_ID" ColumnName="PF_Rate_ID" />
+          <ScalarProperty Name="Fiancial_Year_ID" ColumnName="Fiancial_Year_ID" />
+          <ScalarProperty Name="Employee_Share_Percentage" ColumnName="Employee_Share_Percentage" />
+          <ScalarProperty Name="Employee_Share_Cut_Off" ColumnName="Employee_Share_Cut_Off" />
+          <ScalarProperty Name="Employer_Share_Pension_Percentage" ColumnName="Employer_Share_Pension_Percentage" />
+          <ScalarProperty Name="Employer_Share_PF_Percentage" ColumnName="Employer_Share_PF_Percentage" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professional_Certificate">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Professional_Certificate">
+        <MappingFragment StoreEntitySet="Professional_Certificate">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Certificate_Name" ColumnName="Certificate_Name" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Year_Of_Passing" ColumnName="Year_Of_Passing" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relations">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Relation">
+        <MappingFragment StoreEntitySet="Relation">
+          <ScalarProperty Name="Relation_ID" ColumnName="Relation_ID" />
+          <ScalarProperty Name="Relation_Name" ColumnName="Relation_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salary_Group">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Salary_Group">
+        <MappingFragment StoreEntitySet="Salary_Group">
+          <ScalarProperty Name="Salary_Group_ID" ColumnName="Salary_Group_ID" />
+          <ScalarProperty Name="Salary_Head_ID" ColumnName="Salary_Head_ID" />
+          <ScalarProperty Name="Salary_Group_Type_ID" ColumnName="Salary_Group_Type_ID" />
+          <ScalarProperty Name="Calc_Type" ColumnName="Calc_Type" />
+          <ScalarProperty Name="Amount_Percentage" ColumnName="Amount_Percentage" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+          <ScalarProperty Name="ESI_Applicable" ColumnName="ESI_Applicable" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="Leave_Enchase_Applicable" ColumnName="Leave_Enchase_Applicable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salary_Group_Type_Master">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Salary_Group_Type_Master">
+        <MappingFragment StoreEntitySet="Salary_Group_Type_Master">
+          <ScalarProperty Name="Salary_Group_Type_ID" ColumnName="Salary_Group_Type_ID" />
+          <ScalarProperty Name="Salary_Group_Type_Code" ColumnName="Salary_Group_Type_Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salary_Head">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Salary_Head">
+        <MappingFragment StoreEntitySet="Salary_Head">
+          <ScalarProperty Name="Salary_Head_ID" ColumnName="Salary_Head_ID" />
+          <ScalarProperty Name="Salary_Head_Code" ColumnName="Salary_Head_Code" />
+          <ScalarProperty Name="Salary_Head_Name" ColumnName="Salary_Head_Name" />
+          <ScalarProperty Name="Salary_Head_Type_ID" ColumnName="Salary_Head_Type_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salary_Head_Type">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Salary_Head_Type">
+        <MappingFragment StoreEntitySet="Salary_Head_Type">
+          <ScalarProperty Name="Salary_Head_Type_ID" ColumnName="Salary_Head_Type_ID" />
+          <ScalarProperty Name="Name_Salary_Head" ColumnName="Name_Salary_Head" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salary_Slip_Previous_Company">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Salary_Slip_Previous_Company">
+        <MappingFragment StoreEntitySet="Salary_Slip_Previous_Company">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emp_No" ColumnName="Emp_No" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Sister_Company_Name" ColumnName="Sister_Company_Name" />
+          <ScalarProperty Name="Gross_Salary" ColumnName="Gross_Salary" />
+          <ScalarProperty Name="Deduction" ColumnName="Deduction" />
+          <ScalarProperty Name="Net_Pay" ColumnName="Net_Pay" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="Attachment_Flag" ColumnName="Attachment_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skill_Set">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Skill_Set">
+        <MappingFragment StoreEntitySet="Skill_Set">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Skill_Set_Name" ColumnName="Skill_Set_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StateMasters">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.StateMaster">
+        <MappingFragment StoreEntitySet="StateMaster">
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+          <ScalarProperty Name="State_Code" ColumnName="State_Code" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sub_Department">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Sub_Department">
+        <MappingFragment StoreEntitySet="Sub_Department">
+          <ScalarProperty Name="Sub_Department_ID" ColumnName="Sub_Department_ID" />
+          <ScalarProperty Name="Sub_Department_Name" ColumnName="Sub_Department_Name" />
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryMasters">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.CountryMaster">
+        <MappingFragment StoreEntitySet="CountryMaster">
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="HRM_PayrollModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

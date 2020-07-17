@@ -1,0 +1,33 @@
+﻿@model HR_Payroll.Models.Financial_Institution
+
+@{
+
+
+    Layout = null;
+    ViewBag.Title = "AddUpdate Financial Institution";
+}
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+@using (Html.BeginForm("AddUpdate_Financial_Institution", "Employee", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.Financial_Institution_ID)
+    <div class="form-group">
+        @Html.Label("Financial Institution", new { @class = "control-label" })
+        @Html.EditorFor(model => model.Name, new { htmlAttribute = new { @class = "form-control form-control-sm" } })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancel" class="btn btn-primary" />
+    </div>
+}
+
+
+
+

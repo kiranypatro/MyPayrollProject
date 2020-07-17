@@ -1,0 +1,609 @@
+﻿
+@{
+    ViewBag.Title = "NewEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .panel-default > .panel-heading {
+        color: #333;
+        background-color: #005A6E;
+        border-color: #e4e5e7;
+        padding: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        .panel-default > .panel-heading a {
+            display: block;
+            padding: 5px 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+            .panel-default > .panel-heading a:after {
+                content: "";
+                position: relative;
+                top: 1px;
+                display: inline-block;
+                font-family: 'Glyphicons Halflings';
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                float: right;
+                transition: transform .25s linear;
+                -webkit-transition: -webkit-transform .25s linear;
+            }
+
+            .panel-default > .panel-heading a[aria-expanded="true"] {
+                background-color: #005A6E;
+            }
+
+                .panel-default > .panel-heading a[aria-expanded="true"]:after {
+                    content: "\2212";
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+
+            .panel-default > .panel-heading a[aria-expanded="false"]:after {
+                content: "\002b";
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+
+    .accordion-option {
+        width: 100%;
+        float: left;
+        clear: both;
+        margin: 15px 0;
+    }
+
+        .accordion-option .title {
+            font-size: 16px;
+            font-weight: bold;
+            float: left;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion-option .toggle-accordion {
+            float: right;
+            font-size: 16px;
+            color: #6a6c6f;
+        }
+
+            .accordion-option .toggle-accordion:before {
+                content: "Expand All";
+            }
+
+            .accordion-option .toggle-accordion.active:before {
+                content: "Collapse All";
+            }
+
+    hr {
+        margin-top: -20px;
+        margin-bottom: 1rem;
+        border: 1px solid #005A6E;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="accordion-option">
+    <h3 class="title">Add Employee</h3>
+    @*<a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>*@
+    <div style="float:right">
+        <button class="btn btn-primary">Save</button>
+        <button class="btn btn-primary">Cancel</button>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Personal Information
+                </a>
+                @*<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                    </a>*@
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Select Branch</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control form-control-sm" id="ddlBranch" placeholder="Branch ddl">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Select Group</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control form-control-sm" id="ddlGroup" placeholder="Group ddl">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Select Department</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control form-control-sm" id="ddlDepartment" placeholder="Department ddl">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Select Shift</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control form-control-sm" id="ddlShift" placeholder="Shift ddl">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                @*<div class="row">
+                        <hr />
+                    </div>*@
+                <hr />
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Middle Name">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Father/Husband Name</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control form-control-sm" id="txtFHName" placeholder="Husband / Father Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>PAN No</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control form-control-sm" id="txtPAN" placeholder="PAN No">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Date of Birth</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="date" class="form-control form-control-sm" id="txtDOB" placeholder="Date of Birth">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Gender</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label" for="rbtGender1">
+                                        <input type="radio" class="form-check-input" id="rbtGender1" name="optradio" value="option1" checked>Male
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label" for="rbtGender2">
+                                        <input type="radio" class="form-check-input" id="rbtGender2" name="optradio" value="option2">Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                Address Details
+            </a>
+        </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: whitesmoke;">Present Address</div>
+                        <div class="panel-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Address I</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtTAddress1" placeholder="Address I">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Address II</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtTAddress2" placeholder="Address II">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Country Name</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    @Html.DropDownList("Country_ID", new SelectList(ViewBag.CountryList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-sm" })
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>City</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtTCity" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Pin Code</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtTPincode" placeholder="Pin Code">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Country</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtTCountry" placeholder="Country">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>State</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtTState" placeholder="State">
+                                </div>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="chkSameAddress">
+                                <label class="form-check-label" for="exampleCheck1">Same to Permanent Address</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: whitesmoke;">Permenant Address</div>
+                        <div class="panel-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Address I</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtPAddress1" placeholder="Address I">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Address II</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtPAddress2" placeholder="Address II">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>City</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtPCity" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Pin Code</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtPPincode" placeholder="Pin Code">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>State</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtPState" placeholder="State">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Country</label>
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <input type="text" class="form-control form-control-sm" id="txtPCountry" placeholder="Country">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                Contact Details
+            </a>
+        </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color: whitesmoke;">Phone</div>
+                            <div class="panel-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Land No</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Land No">
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Mobile No</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Mobile No">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label>Work No</label>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Work No">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label>Ext No</label>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Ext No">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color: whitesmoke;">Email Address</div>
+                            <div class="panel-body">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Office Email</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="email" class="form-control form-control-sm" id="inputPassword4" placeholder="Office Email">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Personal Email</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="email" class="form-control form-control-sm" id="inputPassword4" placeholder="Personal Email">
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                Official Details
+            </a>
+        </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+        <div class="panel-body">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color: whitesmoke;"></div>
+                            <div class="panel-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Date of Joining</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="date" class="form-control form-control-sm" id="inputPassword4" placeholder="Date of Joining">
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Job Type</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Job Type">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Salary From</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="date" class="form-control form-control-sm" id="inputPassword4" placeholder="Salary From Date">
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Reporting To I</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Reporting To">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color: whitesmoke;"></div>
+                            <div class="panel-body">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Date of Retirement</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="date" class="form-control form-control-sm" id="inputPassword4" placeholder="Date of Retirement">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Employment Type</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="email" class="form-control form-control-sm" id="inputPassword4" placeholder="Employment Type">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>Reporting To II</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Reporting To">
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div style="float:right">
+    <button class="btn btn-primary">Save</button>
+    <button class="btn btn-primary">Cancel</button>
+</div>
+@section scripts
+    {
+    <script>
+
+        $(document).ready(function () {
+
+            $(".toggle-accordion").on("click", function () {
+                var accordionId = $(this).attr("accordion-id"),
+                    numPanelOpen = $(accordionId + ' .collapse.in').length;
+
+                $(this).toggleClass("active");
+
+                if (numPanelOpen == 0) {
+                    openAllPanels(accordionId);
+                } else {
+                    closeAllPanels(accordionId);
+                }
+            })
+
+            openAllPanels = function (aId) {
+                console.log("setAllPanelOpen");
+                $(aId + ' .panel-collapse:not(".in")').collapse('show');
+            }
+            closeAllPanels = function (aId) {
+                console.log("setAllPanelclose");
+                $(aId + ' .panel-collapse.in').collapse('hide');
+            }
+                     
+        });
+
+
+        $('#chkSameAddress').change(function (event) {
+            if ($(this).is(':checked')) {
+                $('#txtPAddress1').val($('#txtTAddress1').val());
+            }
+            else {
+            }
+            // State has changed to checked/unchecked.
+        })
+    </script>
+
+    @*<script>
+        $("#Country_ID").change(function () {
+            alert($('option:selected', this).text());
+        });
+    </script>*@
+
+}
+

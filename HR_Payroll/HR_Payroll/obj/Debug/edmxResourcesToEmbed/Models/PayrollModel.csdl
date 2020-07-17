@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HR_PayRollModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Asset_Category">
+    <Key>
+      <PropertyRef Name="Category_Code" />
+      <PropertyRef Name="Asset_Category_ID" />
+    </Key>
+    <Property Name="Category_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Category_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Asset_Category_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Asset_Sub_Category" Relationship="HR_PayRollModel.FK__Asset_Sub__Asset__2CF2ADDF" FromRole="Asset_Category" ToRole="Asset_Sub_Category" />
+  </EntityType>
+  <EntityType Name="Asset_Status">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Issuable" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Asset_Sub_Category">
+    <Key>
+      <PropertyRef Name="Sub_Category_Code" />
+      <PropertyRef Name="Asset_Sub_Category_ID" />
+    </Key>
+    <Property Name="Sub_Category_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sub_Category_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Asset_Sub_Category_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Asset_Category_ID" Type="Int32" />
+    <NavigationProperty Name="Asset_Category" Relationship="HR_PayRollModel.FK__Asset_Sub__Asset__2CF2ADDF" FromRole="Asset_Sub_Category" ToRole="Asset_Category" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="Branch_ID" />
+    </Key>
+    <Property Name="Branch_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Branch_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Company_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Company" Relationship="Self.FK__Branch__Company___02FC7413" FromRole="Branch" ToRole="Company" />
+  </EntityType>
+  <EntityType Name="CityMaster">
+    <Key>
+      <PropertyRef Name="City_ID" />
+    </Key>
+    <Property Name="City_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="City_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="State_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StateMaster" Relationship="Self.FK__CityMaste__State__03F0984C" FromRole="CityMaster" ToRole="StateMaster" />
+    <NavigationProperty Name="StateMaster1" Relationship="Self.FK__CityMaste__State__04E4BC85" FromRole="CityMaster" ToRole="StateMaster" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Company_ID" />
+    </Key>
+    <Property Name="Company_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Company_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Branches" Relationship="Self.FK__Branch__Company___02FC7413" FromRole="Company" ToRole="Branch" />
+    <NavigationProperty Name="Financial_Year" Relationship="Self.FK__Financial__Compa__18EBB532" FromRole="Company" ToRole="Financial_Year" />
+  </EntityType>
+  <EntityType Name="Company_Assets">
+    <Key>
+      <PropertyRef Name="Company_Assets_ID" />
+    </Key>
+    <Property Name="Company_Assets_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Asset_Category" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Asset_Sub_Category" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Asset_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Asset_Working_Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Asset_Value" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Recoverable_Value" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Purchase_Date" Type="DateTime" Precision="3" />
+    <Property Name="Warranty_Date" Type="DateTime" Precision="3" />
+    <Property Name="Serial_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Part_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee_Allocate_Asstets" Relationship="Self.FK__Employee___Compa__06CD04F7" FromRole="Company_Assets" ToRole="Employee_Allocate_Asstets" />
+  </EntityType>
+  <EntityType Name="CountryMaster">
+    <Key>
+      <PropertyRef Name="Country_ID" />
+    </Key>
+    <Property Name="Country_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Country_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StateMasters" Relationship="Self.FK__StateMast__Count__208CD6FA" FromRole="CountryMaster" ToRole="StateMaster" />
+    <NavigationProperty Name="StateMasters1" Relationship="Self.FK__StateMast__Count__2180FB33" FromRole="CountryMaster" ToRole="StateMaster" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Department_ID" />
+    </Key>
+    <Property Name="Department_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sub_Department" Relationship="Self.FK__Sub_Depar__Depar__22751F6C" FromRole="Department" ToRole="Sub_Department" />
+    <NavigationProperty Name="Sub_Department1" Relationship="Self.FK__Sub_Depar__Depar__236943A5" FromRole="Department" ToRole="Sub_Department" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="Designation_ID" />
+    </Key>
+    <Property Name="Designation_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Designation_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Emp_No" />
+    </Key>
+    <Property Name="Emp_No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_MiddleName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_Dob" Type="DateTime" Precision="3" />
+    <Property Name="Emp_Doj" Type="DateTime" Precision="3" />
+    <Property Name="Grade_ID" Type="Int32" />
+    <Property Name="Designation_ID" Type="Int32" />
+    <Property Name="Department_ID" Type="Int32" />
+    <Property Name="Sub_Department_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Group_Code_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Machine_Details_ID" Type="Int32" />
+    <Property Name="Machine_Punching_Card_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee_Advance" Relationship="Self.FK__Employee___Emp_N__05D8E0BE" FromRole="Employee" ToRole="Employee_Advance" />
+    <NavigationProperty Name="Employee_Allocate_Asstets" Relationship="Self.FK__Employee___Emp_N__07C12930" FromRole="Employee" ToRole="Employee_Allocate_Asstets" />
+    <NavigationProperty Name="Employee_Attandance" Relationship="Self.FK__Employee___Emp_N__08B54D69" FromRole="Employee" ToRole="Employee_Attandance" />
+    <NavigationProperty Name="Employee_Bonus" Relationship="Self.FK__Employee___Emp_N__09A971A2" FromRole="Employee" ToRole="Employee_Bonus" />
+    <NavigationProperty Name="Employee_Gratutity" Relationship="Self.FK__Employee___Emp_N__0A9D95DB" FromRole="Employee" ToRole="Employee_Gratutity" />
+    <NavigationProperty Name="Employee_Leave_Enchasement" Relationship="Self.FK__Employee___Emp_N__0B91BA14" FromRole="Employee" ToRole="Employee_Leave_Enchasement" />
+    <NavigationProperty Name="Employee_Recover_Asstets" Relationship="Self.FK__Employee___Emp_N__0C85DE4D" FromRole="Employee" ToRole="Employee_Recover_Asstets" />
+    <NavigationProperty Name="Employee_Reimbursement" Relationship="Self.FK__Employee___Emp_N__0E6E26BF" FromRole="Employee" ToRole="Employee_Reimbursement" />
+    <NavigationProperty Name="Employee_Salary" Relationship="Self.FK__Employee___Emp_N__0F624AF8" FromRole="Employee" ToRole="Employee_Salary" />
+    <NavigationProperty Name="Employee_Salary_Account" Relationship="Self.FK__Employee___Emp_N__114A936A" FromRole="Employee" ToRole="Employee_Salary_Account" />
+    <NavigationProperty Name="Employee_Salary_Group_Mapping" Relationship="Self.FK__Employee___Emp_N__123EB7A3" FromRole="Employee" ToRole="Employee_Salary_Group_Mapping" />
+    <NavigationProperty Name="Employee_Salary_Offer_Gross" Relationship="Self.FK__Employee___Emp_N__14270015" FromRole="Employee" ToRole="Employee_Salary_Offer_Gross" />
+    <NavigationProperty Name="Employee_TDS" Relationship="Self.FK__Employee___Emp_N__151B244E" FromRole="Employee" ToRole="Employee_TDS" />
+    <NavigationProperty Name="Financial_Institute_Employee_Mapping" Relationship="Self.FK__Financial__Emp_N__17036CC0" FromRole="Employee" ToRole="Financial_Institute_Employee_Mapping" />
+    <NavigationProperty Name="Monthly_Salary_Roaster" Relationship="Self.FK__Monthly_S__Emp_N__1AD3FDA4" FromRole="Employee" ToRole="Monthly_Salary_Roaster" />
+    <NavigationProperty Name="Pan_Card" Relationship="Self.FK__Pan_Card__Emp_No__1BC821DD" FromRole="Employee" ToRole="Pan_Card" />
+  </EntityType>
+  <EntityType Name="Employee_Advance">
+    <Key>
+      <PropertyRef Name="Advance_ID" />
+    </Key>
+    <Property Name="Advance_ID" Type="Int32" Nullable="false" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Date_Year_Month" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Advance_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Previous_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Recover_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Remark" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__05D8E0BE" FromRole="Employee_Advance" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Allocate_Asstets">
+    <Key>
+      <PropertyRef Name="Employee_Allocate_Asstets_ID" />
+    </Key>
+    <Property Name="Employee_Allocate_Asstets_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Company_Assets_ID" Type="Int32" />
+    <Property Name="Issuable_Date" Type="DateTime" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Company_Assets" Relationship="Self.FK__Employee___Compa__06CD04F7" FromRole="Employee_Allocate_Asstets" ToRole="Company_Assets" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__07C12930" FromRole="Employee_Allocate_Asstets" ToRole="Employee" />
+    <NavigationProperty Name="Employee_Recover_Asstets" Relationship="Self.FK__Employee___Emplo__0D7A0286" FromRole="Employee_Allocate_Asstets" ToRole="Employee_Recover_Asstets" />
+  </EntityType>
+  <EntityType Name="Employee_Attandance">
+    <Key>
+      <PropertyRef Name="Attandance_ID" />
+    </Key>
+    <Property Name="Attandance_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="No_Of_Working_Day" Type="Int32" />
+    <Property Name="Pay_Days" Type="Int32" />
+    <Property Name="No_Of_Days_Emp_Attended" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__08B54D69" FromRole="Employee_Attandance" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Bonus">
+    <Key>
+      <PropertyRef Name="Bonus_ID" />
+    </Key>
+    <Property Name="Bonus_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Bounus_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__09A971A2" FromRole="Employee_Bonus" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Gratutity">
+    <Key>
+      <PropertyRef Name="Gratutity_ID" />
+    </Key>
+    <Property Name="Gratutity_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Date_Of_Leaving" Type="DateTime" Precision="3" />
+    <Property Name="NO_Of_Year_Services" Type="Int32" />
+    <Property Name="Salary_Consider" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Gratutity_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__0A9D95DB" FromRole="Employee_Gratutity" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Leave_Enchasement">
+    <Key>
+      <PropertyRef Name="Leave_Enchasement_ID" />
+    </Key>
+    <Property Name="Leave_Enchasement_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Type_Of_Leave_Enchase" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Leave_Amount_Per_Unit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__0B91BA14" FromRole="Employee_Leave_Enchasement" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Recover_Asstets">
+    <Key>
+      <PropertyRef Name="Recover_Asstets_ID" />
+    </Key>
+    <Property Name="Recover_Asstets_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Employee_Allocate_Asstets_ID" Type="Int32" />
+    <Property Name="Recoverable_Date" Type="DateTime" Precision="3" />
+    <Property Name="Recover_Yes_No" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Recover_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__0C85DE4D" FromRole="Employee_Recover_Asstets" ToRole="Employee" />
+    <NavigationProperty Name="Employee_Allocate_Asstets" Relationship="Self.FK__Employee___Emplo__0D7A0286" FromRole="Employee_Recover_Asstets" ToRole="Employee_Allocate_Asstets" />
+  </EntityType>
+  <EntityType Name="Employee_Reimbursement">
+    <Key>
+      <PropertyRef Name="Reimbursement_ID" />
+    </Key>
+    <Property Name="Reimbursement_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Reimbursement_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reimbursement_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Time_Rule" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__0E6E26BF" FromRole="Employee_Reimbursement" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Salary">
+    <Key>
+      <PropertyRef Name="Salary_ID" />
+    </Key>
+    <Property Name="Salary_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Group_Type_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Earning_Salary_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Deduction_Salary_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WEF_Date" Type="DateTime" Precision="3" />
+    <Property Name="Salary_Payment_Mode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Financial_Year" Type="DateTime" Precision="3" />
+    <Property Name="Flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__0F624AF8" FromRole="Employee_Salary" ToRole="Employee" />
+    <NavigationProperty Name="Salary_Group_Type_Master" Relationship="Self.FK__Employee___Salar__10566F31" FromRole="Employee_Salary" ToRole="Salary_Group_Type_Master" />
+  </EntityType>
+  <EntityType Name="Employee_Salary_Account">
+    <Key>
+      <PropertyRef Name="Salary_Account_ID" />
+    </Key>
+    <Property Name="Salary_Account_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Bank_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Bank_Account_Number" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IFSC_Code" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Bank_Location_Branch" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__114A936A" FromRole="Employee_Salary_Account" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_Salary_Group_Mapping">
+    <Key>
+      <PropertyRef Name="Mapping_ID" />
+    </Key>
+    <Property Name="Mapping_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Group_Type_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__123EB7A3" FromRole="Employee_Salary_Group_Mapping" ToRole="Employee" />
+    <NavigationProperty Name="Salary_Group_Type_Master" Relationship="Self.FK__Employee___Salar__1332DBDC" FromRole="Employee_Salary_Group_Mapping" ToRole="Salary_Group_Type_Master" />
+  </EntityType>
+  <EntityType Name="Employee_Salary_Offer_Gross">
+    <Key>
+      <PropertyRef Name="Salary_Offer_Gross_ID" />
+    </Key>
+    <Property Name="Salary_Offer_Gross_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Yearly_Gross" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Monthly_Gross" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Financial_Year" Type="DateTime" Precision="3" />
+    <Property Name="Appraisal_Year" Type="DateTime" Precision="3" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__14270015" FromRole="Employee_Salary_Offer_Gross" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee_TDS">
+    <Key>
+      <PropertyRef Name="TDS_ID" />
+    </Key>
+    <Property Name="TDS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="TDS_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emp_N__151B244E" FromRole="Employee_TDS" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="ESI_Rate">
+    <Key>
+      <PropertyRef Name="Esi_Rate_ID" />
+    </Key>
+    <Property Name="Esi_Rate_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fiancial_Year_ID" Type="Int32" />
+    <Property Name="Employee_Share_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Employee_Share_Cut_Off" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Employer_Share_Pension_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Employer_Share_PF_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Esi_Daily_Wages" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Reamrk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Financial_Year" Relationship="Self.FK__ESI_Rate__Fianci__160F4887" FromRole="ESI_Rate" ToRole="Financial_Year" />
+  </EntityType>
+  <EntityType Name="Financial_Institute_Employee_Mapping">
+    <Key>
+      <PropertyRef Name="Mapping_ID" />
+    </Key>
+    <Property Name="Mapping_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Financial_Institution_ID" Type="Int32" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Address_Finacial_Institute" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PinCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Financial__Emp_N__17036CC0" FromRole="Financial_Institute_Employee_Mapping" ToRole="Employee" />
+    <NavigationProperty Name="Financial_Institution" Relationship="Self.FK__Financial__Finan__17F790F9" FromRole="Financial_Institute_Employee_Mapping" ToRole="Financial_Institution" />
+  </EntityType>
+  <EntityType Name="Financial_Institution">
+    <Key>
+      <PropertyRef Name="Financial_Institution_ID" />
+    </Key>
+    <Property Name="Financial_Institution_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Financial_Institute_Employee_Mapping" Relationship="Self.FK__Financial__Finan__17F790F9" FromRole="Financial_Institution" ToRole="Financial_Institute_Employee_Mapping" />
+  </EntityType>
+  <EntityType Name="Financial_Year">
+    <Key>
+      <PropertyRef Name="Financial_Year_ID" />
+    </Key>
+    <Property Name="Financial_Year_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Financial_Year1" Type="DateTime" Precision="3" />
+    <Property Name="Company_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Company" Relationship="Self.FK__Financial__Compa__18EBB532" FromRole="Financial_Year" ToRole="Company" />
+    <NavigationProperty Name="ESI_Rate" Relationship="Self.FK__ESI_Rate__Fianci__160F4887" FromRole="Financial_Year" ToRole="ESI_Rate" />
+    <NavigationProperty Name="Gratutity_Setting" Relationship="Self.FK__Gratutity__Fianc__19DFD96B" FromRole="Financial_Year" ToRole="Gratutity_Setting" />
+    <NavigationProperty Name="PF_Rate" Relationship="Self.FK__PF_Rate__Fiancia__1CBC4616" FromRole="Financial_Year" ToRole="PF_Rate" />
+  </EntityType>
+  <EntityType Name="Grade">
+    <Key>
+      <PropertyRef Name="Grade_ID" />
+    </Key>
+    <Property Name="Grade_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grade_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Gratutity_Setting">
+    <Key>
+      <PropertyRef Name="Gratutity_Setting_ID" />
+    </Key>
+    <Property Name="Gratutity_Setting_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Maximum_Gratutity_Limit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Min_Eligibility_Year_for_Gratutity" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Gratutity_Calculated_On" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fiancial_Year_ID" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Financial_Year" Relationship="Self.FK__Gratutity__Fianc__19DFD96B" FromRole="Gratutity_Setting" ToRole="Financial_Year" />
+  </EntityType>
+  <EntityType Name="Monthly_Salary_Roaster">
+    <Key>
+      <PropertyRef Name="Monthly_Salary_Roaster_ID" />
+    </Key>
+    <Property Name="Monthly_Salary_Roaster_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Employee_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Dept_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="No_Of_Working_Days" Type="Int32" />
+    <Property Name="No_Pay_days" Type="Int32" />
+    <Property Name="No_Of_Attendance" Type="Int32" />
+    <Property Name="Gross_Salary" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Basic_Amount_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Conveyance_Allowance_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="HRA_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Medical_Allowance_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Travelling_Allowance_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Money_Advance_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Other_Reimbursement_Amount_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Bouns_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Gratutity_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Leave_Enchasment_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Food_Coupon_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PF_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ESI_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TDS_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Money_Advance_Recovery_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Asset_Recovery_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Gross_Deduction" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Gross_Earning" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Net_Payable" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Salary_Year" Type="Int32" />
+    <Property Name="Salary_Month" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Monthly_S__Emp_N__1AD3FDA4" FromRole="Monthly_Salary_Roaster" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="NationalityMaster">
+    <Key>
+      <PropertyRef Name="Nationality_ID" />
+    </Key>
+    <Property Name="Nationality_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nationality_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Pan_Card">
+    <Key>
+      <PropertyRef Name="Pan_Card_ID" />
+    </Key>
+    <Property Name="Pan_Card_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_No" Type="Int32" />
+    <Property Name="Pan_Number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Pan_Card__Emp_No__1BC821DD" FromRole="Pan_Card" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="PF_Rate">
+    <Key>
+      <PropertyRef Name="PF_Rate_ID" />
+    </Key>
+    <Property Name="PF_Rate_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fiancial_Year_ID" Type="Int32" />
+    <Property Name="Employee_Share_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Employee_Share_Cut_Off" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Employer_Share_Pension_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Employer_Share_PF_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Financial_Year" Relationship="Self.FK__PF_Rate__Fiancia__1CBC4616" FromRole="PF_Rate" ToRole="Financial_Year" />
+  </EntityType>
+  <EntityType Name="Salary_Group">
+    <Key>
+      <PropertyRef Name="Salary_Group_ID" />
+    </Key>
+    <Property Name="Salary_Group_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Salary_Head_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Salary_Group_Type_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Calc_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Amount_Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PF_Applicable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ESI_Applicable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OT_Applicable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Leave_Enchase_Applicable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Salary_Head" Relationship="Self.FK__Salary_Gr__Salar__1DB06A4F" FromRole="Salary_Group" ToRole="Salary_Head" />
+    <NavigationProperty Name="Salary_Group_Type_Master" Relationship="Self.FK__Salary_Gr__Salar__1EA48E88" FromRole="Salary_Group" ToRole="Salary_Group_Type_Master" />
+  </EntityType>
+  <EntityType Name="Salary_Group_Type_Master">
+    <Key>
+      <PropertyRef Name="Salary_Group_Type_Code" />
+    </Key>
+    <Property Name="Salary_Group_Type_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="What_Type" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee_Salary" Relationship="Self.FK__Employee___Salar__10566F31" FromRole="Salary_Group_Type_Master" ToRole="Employee_Salary" />
+    <NavigationProperty Name="Employee_Salary_Group_Mapping" Relationship="Self.FK__Employee___Salar__1332DBDC" FromRole="Salary_Group_Type_Master" ToRole="Employee_Salary_Group_Mapping" />
+    <NavigationProperty Name="Salary_Group" Relationship="Self.FK__Salary_Gr__Salar__1EA48E88" FromRole="Salary_Group_Type_Master" ToRole="Salary_Group" />
+  </EntityType>
+  <EntityType Name="Salary_Head">
+    <Key>
+      <PropertyRef Name="Salary_Head_Code" />
+    </Key>
+    <Property Name="Salary_Head_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Salary_Head_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Salary_Head_Type_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Salary_Group" Relationship="Self.FK__Salary_Gr__Salar__1DB06A4F" FromRole="Salary_Head" ToRole="Salary_Group" />
+    <NavigationProperty Name="Salary_Head_Type" Relationship="Self.FK__Salary_He__Salar__1F98B2C1" FromRole="Salary_Head" ToRole="Salary_Head_Type" />
+  </EntityType>
+  <EntityType Name="Salary_Head_Type">
+    <Key>
+      <PropertyRef Name="Salary_Head_Type_ID" />
+    </Key>
+    <Property Name="Salary_Head_Type_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Salary_Head" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Salary_Head" Relationship="Self.FK__Salary_He__Salar__1F98B2C1" FromRole="Salary_Head_Type" ToRole="Salary_Head" />
+  </EntityType>
+  <EntityType Name="StateMaster">
+    <Key>
+      <PropertyRef Name="State_ID" />
+    </Key>
+    <Property Name="State_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="State_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Country_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CityMasters" Relationship="Self.FK__CityMaste__State__03F0984C" FromRole="StateMaster" ToRole="CityMaster" />
+    <NavigationProperty Name="CityMasters1" Relationship="Self.FK__CityMaste__State__04E4BC85" FromRole="StateMaster" ToRole="CityMaster" />
+    <NavigationProperty Name="CountryMaster" Relationship="Self.FK__StateMast__Count__208CD6FA" FromRole="StateMaster" ToRole="CountryMaster" />
+    <NavigationProperty Name="CountryMaster1" Relationship="Self.FK__StateMast__Count__2180FB33" FromRole="StateMaster" ToRole="CountryMaster" />
+  </EntityType>
+  <EntityType Name="Sub_Department">
+    <Key>
+      <PropertyRef Name="Sub_Department_ID" />
+    </Key>
+    <Property Name="Sub_Department_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Department_ID" Type="Int32" />
+    <Property Name="Creation_Date" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Sub_Depar__Depar__22751F6C" FromRole="Sub_Department" ToRole="Department" />
+    <NavigationProperty Name="Department1" Relationship="Self.FK__Sub_Depar__Depar__236943A5" FromRole="Sub_Department" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK__Asset_Sub__Categ__02084FDA">
+    <End Role="Asset_Category" Type="Self.Asset_Category" Multiplicity="0..1" />
+    <End Role="Asset_Sub_Category" Type="Self.Asset_Sub_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asset_Category">
+        <PropertyRef Name="Category_Code" />
+      </Principal>
+      <Dependent Role="Asset_Sub_Category">
+        <PropertyRef Name="Category_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Branch__Company___02FC7413">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Branch" Type="Self.Branch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Company_ID" />
+      </Principal>
+      <Dependent Role="Branch">
+        <PropertyRef Name="Company_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CityMaste__State__03F0984C">
+    <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="0..1" />
+    <End Role="CityMaster" Type="Self.CityMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateMaster">
+        <PropertyRef Name="State_ID" />
+      </Principal>
+      <Dependent Role="CityMaster">
+        <PropertyRef Name="State_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CityMaste__State__04E4BC85">
+    <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="0..1" />
+    <End Role="CityMaster" Type="Self.CityMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateMaster">
+        <PropertyRef Name="State_ID" />
+      </Principal>
+      <Dependent Role="CityMaster">
+        <PropertyRef Name="State_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Financial__Compa__18EBB532">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Financial_Year" Type="Self.Financial_Year" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Company_ID" />
+      </Principal>
+      <Dependent Role="Financial_Year">
+        <PropertyRef Name="Company_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Compa__06CD04F7">
+    <End Role="Company_Assets" Type="Self.Company_Assets" Multiplicity="0..1" />
+    <End Role="Employee_Allocate_Asstets" Type="Self.Employee_Allocate_Asstets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company_Assets">
+        <PropertyRef Name="Company_Assets_ID" />
+      </Principal>
+      <Dependent Role="Employee_Allocate_Asstets">
+        <PropertyRef Name="Company_Assets_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StateMast__Count__208CD6FA">
+    <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
+    <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryMaster">
+        <PropertyRef Name="Country_ID" />
+      </Principal>
+      <Dependent Role="StateMaster">
+        <PropertyRef Name="Country_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StateMast__Count__2180FB33">
+    <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
+    <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryMaster">
+        <PropertyRef Name="Country_ID" />
+      </Principal>
+      <Dependent Role="StateMaster">
+        <PropertyRef Name="Country_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sub_Depar__Depar__22751F6C">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Sub_Department" Type="Self.Sub_Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Department_ID" />
+      </Principal>
+      <Dependent Role="Sub_Department">
+        <PropertyRef Name="Department_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sub_Depar__Depar__236943A5">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Sub_Department" Type="Self.Sub_Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Department_ID" />
+      </Principal>
+      <Dependent Role="Sub_Department">
+        <PropertyRef Name="Department_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__05D8E0BE">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Advance" Type="Self.Employee_Advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Advance">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__07C12930">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Allocate_Asstets" Type="Self.Employee_Allocate_Asstets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Allocate_Asstets">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__08B54D69">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Attandance" Type="Self.Employee_Attandance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Attandance">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__09A971A2">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Bonus" Type="Self.Employee_Bonus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Bonus">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__0A9D95DB">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Gratutity" Type="Self.Employee_Gratutity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Gratutity">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__0B91BA14">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Leave_Enchasement" Type="Self.Employee_Leave_Enchasement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Leave_Enchasement">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__0C85DE4D">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Recover_Asstets" Type="Self.Employee_Recover_Asstets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Recover_Asstets">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__0E6E26BF">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Reimbursement" Type="Self.Employee_Reimbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Reimbursement">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__0F624AF8">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Salary" Type="Self.Employee_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__114A936A">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Salary_Account" Type="Self.Employee_Salary_Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Salary_Account">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__123EB7A3">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Salary_Group_Mapping" Type="Self.Employee_Salary_Group_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Salary_Group_Mapping">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__14270015">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_Salary_Offer_Gross" Type="Self.Employee_Salary_Offer_Gross" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_Salary_Offer_Gross">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emp_N__151B244E">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employee_TDS" Type="Self.Employee_TDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Employee_TDS">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Financial__Emp_N__17036CC0">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Financial_Institute_Employee_Mapping" Type="Self.Financial_Institute_Employee_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Financial_Institute_Employee_Mapping">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Monthly_S__Emp_N__1AD3FDA4">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Monthly_Salary_Roaster" Type="Self.Monthly_Salary_Roaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Monthly_Salary_Roaster">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pan_Card__Emp_No__1BC821DD">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Pan_Card" Type="Self.Pan_Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Emp_No" />
+      </Principal>
+      <Dependent Role="Pan_Card">
+        <PropertyRef Name="Emp_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emplo__0D7A0286">
+    <End Role="Employee_Allocate_Asstets" Type="Self.Employee_Allocate_Asstets" Multiplicity="0..1" />
+    <End Role="Employee_Recover_Asstets" Type="Self.Employee_Recover_Asstets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Allocate_Asstets">
+        <PropertyRef Name="Employee_Allocate_Asstets_ID" />
+      </Principal>
+      <Dependent Role="Employee_Recover_Asstets">
+        <PropertyRef Name="Employee_Allocate_Asstets_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Salar__10566F31">
+    <End Role="Salary_Group_Type_Master" Type="Self.Salary_Group_Type_Master" Multiplicity="0..1" />
+    <End Role="Employee_Salary" Type="Self.Employee_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary_Group_Type_Master">
+        <PropertyRef Name="Salary_Group_Type_Code" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Salary_Group_Type_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Salar__1332DBDC">
+    <End Role="Salary_Group_Type_Master" Type="Self.Salary_Group_Type_Master" Multiplicity="0..1" />
+    <End Role="Employee_Salary_Group_Mapping" Type="Self.Employee_Salary_Group_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary_Group_Type_Master">
+        <PropertyRef Name="Salary_Group_Type_Code" />
+      </Principal>
+      <Dependent Role="Employee_Salary_Group_Mapping">
+        <PropertyRef Name="Salary_Group_Type_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ESI_Rate__Fianci__160F4887">
+    <End Role="Financial_Year" Type="Self.Financial_Year" Multiplicity="0..1" />
+    <End Role="ESI_Rate" Type="Self.ESI_Rate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Financial_Year">
+        <PropertyRef Name="Financial_Year_ID" />
+      </Principal>
+      <Dependent Role="ESI_Rate">
+        <PropertyRef Name="Fiancial_Year_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Financial__Finan__17F790F9">
+    <End Role="Financial_Institution" Type="Self.Financial_Institution" Multiplicity="0..1" />
+    <End Role="Financial_Institute_Employee_Mapping" Type="Self.Financial_Institute_Employee_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Financial_Institution">
+        <PropertyRef Name="Financial_Institution_ID" />
+      </Principal>
+      <Dependent Role="Financial_Institute_Employee_Mapping">
+        <PropertyRef Name="Financial_Institution_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Gratutity__Fianc__19DFD96B">
+    <End Role="Financial_Year" Type="Self.Financial_Year" Multiplicity="0..1" />
+    <End Role="Gratutity_Setting" Type="Self.Gratutity_Setting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Financial_Year">
+        <PropertyRef Name="Financial_Year_ID" />
+      </Principal>
+      <Dependent Role="Gratutity_Setting">
+        <PropertyRef Name="Fiancial_Year_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PF_Rate__Fiancia__1CBC4616">
+    <End Role="Financial_Year" Type="Self.Financial_Year" Multiplicity="0..1" />
+    <End Role="PF_Rate" Type="Self.PF_Rate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Financial_Year">
+        <PropertyRef Name="Financial_Year_ID" />
+      </Principal>
+      <Dependent Role="PF_Rate">
+        <PropertyRef Name="Fiancial_Year_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary_Gr__Salar__1DB06A4F">
+    <End Role="Salary_Head" Type="Self.Salary_Head" Multiplicity="0..1" />
+    <End Role="Salary_Group" Type="Self.Salary_Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary_Head">
+        <PropertyRef Name="Salary_Head_Code" />
+      </Principal>
+      <Dependent Role="Salary_Group">
+        <PropertyRef Name="Salary_Head_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary_Gr__Salar__1EA48E88">
+    <End Role="Salary_Group_Type_Master" Type="Self.Salary_Group_Type_Master" Multiplicity="0..1" />
+    <End Role="Salary_Group" Type="Self.Salary_Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary_Group_Type_Master">
+        <PropertyRef Name="Salary_Group_Type_Code" />
+      </Principal>
+      <Dependent Role="Salary_Group">
+        <PropertyRef Name="Salary_Group_Type_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salary_He__Salar__1F98B2C1">
+    <End Role="Salary_Head_Type" Type="Self.Salary_Head_Type" Multiplicity="0..1" />
+    <End Role="Salary_Head" Type="Self.Salary_Head" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary_Head_Type">
+        <PropertyRef Name="Salary_Head_Type_ID" />
+      </Principal>
+      <Dependent Role="Salary_Head">
+        <PropertyRef Name="Salary_Head_Type_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HR_PayRollEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Asset_Category" EntityType="Self.Asset_Category" />
+    <EntitySet Name="Asset_Status" EntityType="Self.Asset_Status" />
+    <EntitySet Name="Asset_Sub_Category" EntityType="Self.Asset_Sub_Category" />
+    <EntitySet Name="Branches" EntityType="Self.Branch" />
+    <EntitySet Name="CityMasters" EntityType="Self.CityMaster" />
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="Company_Assets" EntityType="Self.Company_Assets" />
+    <EntitySet Name="CountryMasters" EntityType="Self.CountryMaster" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Designations" EntityType="Self.Designation" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Employee_Advance" EntityType="Self.Employee_Advance" />
+    <EntitySet Name="Employee_Allocate_Asstets" EntityType="Self.Employee_Allocate_Asstets" />
+    <EntitySet Name="Employee_Attandance" EntityType="Self.Employee_Attandance" />
+    <EntitySet Name="Employee_Bonus" EntityType="Self.Employee_Bonus" />
+    <EntitySet Name="Employee_Gratutity" EntityType="Self.Employee_Gratutity" />
+    <EntitySet Name="Employee_Leave_Enchasement" EntityType="Self.Employee_Leave_Enchasement" />
+    <EntitySet Name="Employee_Recover_Asstets" EntityType="Self.Employee_Recover_Asstets" />
+    <EntitySet Name="Employee_Reimbursement" EntityType="Self.Employee_Reimbursement" />
+    <EntitySet Name="Employee_Salary" EntityType="Self.Employee_Salary" />
+    <EntitySet Name="Employee_Salary_Account" EntityType="Self.Employee_Salary_Account" />
+    <EntitySet Name="Employee_Salary_Group_Mapping" EntityType="Self.Employee_Salary_Group_Mapping" />
+    <EntitySet Name="Employee_Salary_Offer_Gross" EntityType="Self.Employee_Salary_Offer_Gross" />
+    <EntitySet Name="Employee_TDS" EntityType="Self.Employee_TDS" />
+    <EntitySet Name="ESI_Rate" EntityType="Self.ESI_Rate" />
+    <EntitySet Name="Financial_Institute_Employee_Mapping" EntityType="Self.Financial_Institute_Employee_Mapping" />
+    <EntitySet Name="Financial_Institution" EntityType="Self.Financial_Institution" />
+    <EntitySet Name="Financial_Year" EntityType="Self.Financial_Year" />
+    <EntitySet Name="Grades" EntityType="Self.Grade" />
+    <EntitySet Name="Gratutity_Setting" EntityType="Self.Gratutity_Setting" />
+    <EntitySet Name="Monthly_Salary_Roaster" EntityType="Self.Monthly_Salary_Roaster" />
+    <EntitySet Name="NationalityMasters" EntityType="Self.NationalityMaster" />
+    <EntitySet Name="Pan_Card" EntityType="Self.Pan_Card" />
+    <EntitySet Name="PF_Rate" EntityType="Self.PF_Rate" />
+    <EntitySet Name="Salary_Group" EntityType="Self.Salary_Group" />
+    <EntitySet Name="Salary_Group_Type_Master" EntityType="Self.Salary_Group_Type_Master" />
+    <EntitySet Name="Salary_Head" EntityType="Self.Salary_Head" />
+    <EntitySet Name="Salary_Head_Type" EntityType="Self.Salary_Head_Type" />
+    <EntitySet Name="StateMasters" EntityType="Self.StateMaster" />
+    <EntitySet Name="Sub_Department" EntityType="Self.Sub_Department" />
+    <AssociationSet Name="FK__Asset_Sub__Categ__02084FDA" Association="Self.FK__Asset_Sub__Categ__02084FDA">
+      <End Role="Asset_Category" EntitySet="Asset_Category" />
+      <End Role="Asset_Sub_Category" EntitySet="Asset_Sub_Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Branch__Company___02FC7413" Association="Self.FK__Branch__Company___02FC7413">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Branch" EntitySet="Branches" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CityMaste__State__03F0984C" Association="Self.FK__CityMaste__State__03F0984C">
+      <End Role="StateMaster" EntitySet="StateMasters" />
+      <End Role="CityMaster" EntitySet="CityMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CityMaste__State__04E4BC85" Association="Self.FK__CityMaste__State__04E4BC85">
+      <End Role="StateMaster" EntitySet="StateMasters" />
+      <End Role="CityMaster" EntitySet="CityMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Financial__Compa__18EBB532" Association="Self.FK__Financial__Compa__18EBB532">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Financial_Year" EntitySet="Financial_Year" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Compa__06CD04F7" Association="Self.FK__Employee___Compa__06CD04F7">
+      <End Role="Company_Assets" EntitySet="Company_Assets" />
+      <End Role="Employee_Allocate_Asstets" EntitySet="Employee_Allocate_Asstets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StateMast__Count__208CD6FA" Association="Self.FK__StateMast__Count__208CD6FA">
+      <End Role="CountryMaster" EntitySet="CountryMasters" />
+      <End Role="StateMaster" EntitySet="StateMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StateMast__Count__2180FB33" Association="Self.FK__StateMast__Count__2180FB33">
+      <End Role="CountryMaster" EntitySet="CountryMasters" />
+      <End Role="StateMaster" EntitySet="StateMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sub_Depar__Depar__22751F6C" Association="Self.FK__Sub_Depar__Depar__22751F6C">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Sub_Department" EntitySet="Sub_Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sub_Depar__Depar__236943A5" Association="Self.FK__Sub_Depar__Depar__236943A5">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Sub_Department" EntitySet="Sub_Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__05D8E0BE" Association="Self.FK__Employee___Emp_N__05D8E0BE">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Advance" EntitySet="Employee_Advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__07C12930" Association="Self.FK__Employee___Emp_N__07C12930">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Allocate_Asstets" EntitySet="Employee_Allocate_Asstets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__08B54D69" Association="Self.FK__Employee___Emp_N__08B54D69">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Attandance" EntitySet="Employee_Attandance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__09A971A2" Association="Self.FK__Employee___Emp_N__09A971A2">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Bonus" EntitySet="Employee_Bonus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__0A9D95DB" Association="Self.FK__Employee___Emp_N__0A9D95DB">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Gratutity" EntitySet="Employee_Gratutity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__0B91BA14" Association="Self.FK__Employee___Emp_N__0B91BA14">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Leave_Enchasement" EntitySet="Employee_Leave_Enchasement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__0C85DE4D" Association="Self.FK__Employee___Emp_N__0C85DE4D">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Recover_Asstets" EntitySet="Employee_Recover_Asstets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__0E6E26BF" Association="Self.FK__Employee___Emp_N__0E6E26BF">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Reimbursement" EntitySet="Employee_Reimbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__0F624AF8" Association="Self.FK__Employee___Emp_N__0F624AF8">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__114A936A" Association="Self.FK__Employee___Emp_N__114A936A">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Salary_Account" EntitySet="Employee_Salary_Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__123EB7A3" Association="Self.FK__Employee___Emp_N__123EB7A3">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Salary_Group_Mapping" EntitySet="Employee_Salary_Group_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__14270015" Association="Self.FK__Employee___Emp_N__14270015">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Salary_Offer_Gross" EntitySet="Employee_Salary_Offer_Gross" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emp_N__151B244E" Association="Self.FK__Employee___Emp_N__151B244E">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_TDS" EntitySet="Employee_TDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Financial__Emp_N__17036CC0" Association="Self.FK__Financial__Emp_N__17036CC0">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Financial_Institute_Employee_Mapping" EntitySet="Financial_Institute_Employee_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Monthly_S__Emp_N__1AD3FDA4" Association="Self.FK__Monthly_S__Emp_N__1AD3FDA4">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Monthly_Salary_Roaster" EntitySet="Monthly_Salary_Roaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pan_Card__Emp_No__1BC821DD" Association="Self.FK__Pan_Card__Emp_No__1BC821DD">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Pan_Card" EntitySet="Pan_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emplo__0D7A0286" Association="Self.FK__Employee___Emplo__0D7A0286">
+      <End Role="Employee_Allocate_Asstets" EntitySet="Employee_Allocate_Asstets" />
+      <End Role="Employee_Recover_Asstets" EntitySet="Employee_Recover_Asstets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Salar__10566F31" Association="Self.FK__Employee___Salar__10566F31">
+      <End Role="Salary_Group_Type_Master" EntitySet="Salary_Group_Type_Master" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Salar__1332DBDC" Association="Self.FK__Employee___Salar__1332DBDC">
+      <End Role="Salary_Group_Type_Master" EntitySet="Salary_Group_Type_Master" />
+      <End Role="Employee_Salary_Group_Mapping" EntitySet="Employee_Salary_Group_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ESI_Rate__Fianci__160F4887" Association="Self.FK__ESI_Rate__Fianci__160F4887">
+      <End Role="Financial_Year" EntitySet="Financial_Year" />
+      <End Role="ESI_Rate" EntitySet="ESI_Rate" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Financial__Finan__17F790F9" Association="Self.FK__Financial__Finan__17F790F9">
+      <End Role="Financial_Institution" EntitySet="Financial_Institution" />
+      <End Role="Financial_Institute_Employee_Mapping" EntitySet="Financial_Institute_Employee_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Gratutity__Fianc__19DFD96B" Association="Self.FK__Gratutity__Fianc__19DFD96B">
+      <End Role="Financial_Year" EntitySet="Financial_Year" />
+      <End Role="Gratutity_Setting" EntitySet="Gratutity_Setting" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PF_Rate__Fiancia__1CBC4616" Association="Self.FK__PF_Rate__Fiancia__1CBC4616">
+      <End Role="Financial_Year" EntitySet="Financial_Year" />
+      <End Role="PF_Rate" EntitySet="PF_Rate" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary_Gr__Salar__1DB06A4F" Association="Self.FK__Salary_Gr__Salar__1DB06A4F">
+      <End Role="Salary_Head" EntitySet="Salary_Head" />
+      <End Role="Salary_Group" EntitySet="Salary_Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary_Gr__Salar__1EA48E88" Association="Self.FK__Salary_Gr__Salar__1EA48E88">
+      <End Role="Salary_Group_Type_Master" EntitySet="Salary_Group_Type_Master" />
+      <End Role="Salary_Group" EntitySet="Salary_Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salary_He__Salar__1F98B2C1" Association="Self.FK__Salary_He__Salar__1F98B2C1">
+      <End Role="Salary_Head_Type" EntitySet="Salary_Head_Type" />
+      <End Role="Salary_Head" EntitySet="Salary_Head" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asset_Sub__Asset__2CF2ADDF" Association="HR_PayRollModel.FK__Asset_Sub__Asset__2CF2ADDF">
+      <End Role="Asset_Category" EntitySet="Asset_Category" />
+      <End Role="Asset_Sub_Category" EntitySet="Asset_Sub_Category" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK__Asset_Sub__Asset__2CF2ADDF">
+    <End Type="HR_PayRollModel.Asset_Category" Role="Asset_Category" Multiplicity="0..1" />
+    <End Type="HR_PayRollModel.Asset_Sub_Category" Role="Asset_Sub_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asset_Category">
+        <PropertyRef Name="Asset_Category_ID" />
+      </Principal>
+      <Dependent Role="Asset_Sub_Category">
+        <PropertyRef Name="Asset_Category_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

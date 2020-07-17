@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<style>
+    /* FANCY COLLAPSE PANEL STYLES */
+    .fancy-collapse-panel .panel-default > .panel-heading {
+        padding: 0;
+    }
+
+    .fancy-collapse-panel .panel-heading a {
+        padding: 5px 10px 5px 5px;
+        display: inline-block;
+        width: 100%;
+        background-color: #005a6e;
+        color: #ffffff;
+        position: relative;
+        text-decoration: none;
+    }
+
+        .fancy-collapse-panel .panel-heading a:after {
+            font-family: "FontAwesome";
+            content: "\f147";
+            position: absolute;
+            right: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            top: 50%;
+            line-height: 1;
+            margin-top: -10px;
+        }
+
+        .fancy-collapse-panel .panel-heading a.collapsed:after {
+            content: "\f196";
+        }
+</style>
+@*<div class="container">*@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <br />
+        <h4>Employee Information</h4>
+        <br />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-md-offset-12 col-sm-12 col-sm-offset-12">
+        <div class="fancy-collapse-panel">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h6 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Personal Information
+                            </a>
+                        </h6>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Middle Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="Address I">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Address II">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="Mobile Number">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Contact Number">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-sm" id="inputAddress" placeholder="Email Address">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="City">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        @*<select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>*@
+                                        <input type="text" class="form-control form-control-sm" id="inputState" placeholder="State">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <input type="text" class="form-control form-control-sm" id="inputZip" placeholder="Pin Code">
+                                    </div>
+                                </div>
+                              
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h6 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Job Information
+                            </a>
+                        </h6>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h6 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Emergency Contact Information
+                            </a>
+                        </h6>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $('.panel-collapse collapse in').show();
+        $('.panel-collapse collapse in').addClass('accordion-header-active');
+    });
+</script>
+@*</div>*@
