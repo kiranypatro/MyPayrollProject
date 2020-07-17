@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="365915488c564af3a776958f1bd7b0ff" Name="Diagram1">
+        <EntityTypeShape EntityType="HRM_PayrollModel.Asset_Category" Width="1.5" PointX="12.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Asset_Status" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Asset_Sub_Category" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Branch" Width="1.5" PointX="8" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.CityMaster" Width="1.5" PointX="8" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Communication_Address" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Company" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Company_Assets" Width="1.5" PointX="3.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Dependent" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Designation" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Educational_Background" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee" Width="1.5" PointX="0.75" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Advance" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Allocate_Asstets" Width="1.5" PointX="6" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Attandance" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Bonus" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Gratutity" Width="1.5" PointX="3" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Leave_Enchasement" Width="1.5" PointX="3" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Recover_Asstets" Width="1.5" PointX="11.25" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Reimbursement" Width="1.5" PointX="3" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Salary" Width="1.5" PointX="6" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Salary_Account" Width="1.5" PointX="3" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Salary_Group_Mapping" Width="1.5" PointX="6" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_Salary_Offer_Gross" Width="1.5" PointX="3" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Employee_TDS" Width="1.5" PointX="3" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.ESI_Rate" Width="1.5" PointX="10.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Experince_Letter_Previous_Company" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Financial_Institute_Employee_Mapping" Width="1.5" PointX="9" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Financial_Institution" Width="1.5" PointX="6.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Financial_Year" Width="1.5" PointX="8" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Grade" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Gratutity_Setting" Width="1.5" PointX="10.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Health_Insurance" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Holiday" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Language" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Marriage_Certificate_Proof" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Monthly_Salary_Roaster" Width="1.5" PointX="3" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.NationalityMaster" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Nominee_Details" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Pan_Card" Width="1.5" PointX="3" PointY="74.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Passport" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Permanent_Address" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.PF_Rate" Width="1.5" PointX="10.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Professional_Certificate" Width="1.5" PointX="15.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Relation" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Salary_Group" Width="1.5" PointX="13.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Salary_Group_Type_Master" Width="1.5" PointX="3.75" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Salary_Head" Width="1.5" PointX="10" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Salary_Head_Type" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Salary_Slip_Previous_Company" Width="1.5" PointX="17.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Skill_Set" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.StateMaster" Width="1.5" PointX="5.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Sub_Department" Width="1.5" PointX="13" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.CountryMaster" Width="1.5" PointX="3.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRM_PayrollModel.Department" Width="1.5" PointX="10.75" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Asset_Sub__Asset__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Branch__Company___09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Branch__State_ID__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__CityMaste__State__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Financial__Compa__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Compa__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emp_N__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Financial__Emp_N__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Monthly_S__Emp_N__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Pan_Card__Emp_No__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Emplo__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Salar__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Employee___Salar__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__ESI_Rate__Fianci__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Financial__Finan__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Gratutity__Fianc__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__PF_Rate__Fiancia__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Salary_Gr__Salar__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Salary_Gr__Salar__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Salary_He__Salar__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__StateMast__Count__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="HRM_PayrollModel.FK__Sub_Depar__Depar__282DF8C2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
